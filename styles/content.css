@@ -1,0 +1,18 @@
+.copy-link-text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    background-color:#eef9bf ;
+    margin-left: 180px;
+    border-radius: 10px 0 10px 0;
+}
+
+#input-id{
+    margin-left: 20px;
+}
+
+.copy{
+    margin-left: 20px;
+}

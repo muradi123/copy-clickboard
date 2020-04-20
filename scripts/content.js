@@ -1,7 +1,4 @@
-chrome.runtime.onMessage.addListener(
-    function({message}, sender, sendResponse) {
-     
-      if (message === "clicked"){
+
         let div = document.createElement('div');
             div.className = 'copy-link-text';
 
@@ -47,8 +44,8 @@ chrome.runtime.onMessage.addListener(
         $("body").append(inp);
         let string = ""
 
-        $('.LC20lb').filter(':has(:checkbox:checked)').each(function() {                     
-           string += $(this).text()
+        $('a').filter(':has(:checkbox:checked)').each(function() {                     
+           string += $(this).attr('href')
         }) 
         inp.val(string).select();
         document.execCommand("copy");
@@ -56,6 +53,4 @@ chrome.runtime.onMessage.addListener(
     
         });
          
-    }      
-    
-});
+ 

@@ -1,7 +1,7 @@
 {
     "name": "chekbox",
     "description" : "choose chekbox",
-    "version": "0.1",
+    "version": "1.1",
     "icons":{
         "128":"./images/correct128.png",
         "64":"./images/correct 64.png",

@@ -23,10 +23,12 @@
         document.querySelector('.mw').prepend(div);
 
        const allDiv =  $('.LC20lb');
+       const allNews = $('.l')
        let input = document.createElement('input');
        input.type = "checkbox";
        input.className = "prepend-div";
        allDiv.prepend(input);
+       allNews.prepend(input);
        $('#input-id').click(function() {
        $('input:checkbox').not(this).prop('checked', this.checked);
       });
@@ -38,19 +40,19 @@
         button.innerHTML = 'copy';
         }, 750);
         
+        const el = document.createElement('textarea');
+        document.body.appendChild(el);
         
-      
-        const inp = $("<input>");
-        $("body").append(inp);
-        let string = ""
-
-        $('a').filter(':has(:checkbox:checked)').each(function() {                     
-           string += $(this).attr('href')
+        let string = "";
+        $('a').filter(':has(:checkbox:checked)').each(function() {       
+           string+= $(this).attr('href') + "\n";
+           
         }) 
-        inp.val(string).select();
+        el.value = string;
+        el.select();
         document.execCommand("copy");
-        inp.remove();
-    
+        document.body.removeChild(el)
+        
         });
-         
- 
+        
+
